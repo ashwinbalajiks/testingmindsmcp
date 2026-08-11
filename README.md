@@ -14,7 +14,7 @@ This repository demonstrates how AI agents can perform:
 # Repository
 
 ```text
-https://github.com/ashwinbalajiks/testingmindsmcp
+[https://github.com/ashwinbalajiks/testingmindsmcp](https://github.com/ashwinbalajiks/testingmindsmcp.git)
 ```
 
 ---
