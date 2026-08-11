@@ -1,4 +1,4 @@
-# TestingMinds MCP Workshop
+# TestingMinds MCP Tutorial
 
 Practical QA workflows using **Chrome DevTools MCP** and **GitHub Copilot Agent Mode**.
 
