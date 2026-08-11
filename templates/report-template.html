@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>QA Deployment Readiness Report</title>
+
+<link rel="stylesheet" href="report.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>QA Report</h2>
+
+<a href="#summary">Executive Summary</a>
+<a href="#kpi">Coverage Metrics</a>
+<a href="#pages">Pages</a>
+<a href="#network">Network</a>
+<a href="#console">Console</a>
+<a href="#resources">Broken Resources</a>
+<a href="#accessibility">Accessibility</a>
+<a href="#performance">Performance</a>
+<a href="#findings">Findings</a>
+<a href="#gallery">Evidence Gallery</a>
+<a href="#appendix">Appendix</a>
+
+</div>
+
+
+<div class="content">
+
+<section class="hero">
+
+<h1>QA Deployment Readiness Report</h1>
+
+<div class="meta">
+
+<p><strong>Run ID</strong> {{RUN_ID}}</p>
+
+<p><strong>Target URL</strong> {{TARGET_URL}}</p>
+
+<p><strong>Assessment Time</strong> {{TIMESTAMP}}</p>
+
+</div>
+
+<div class="score">
+
+<div class="score-circle">
+
+{{READINESS_SCORE}}
+
+</div>
+
+<div>
+
+<h2>{{READINESS_STATUS}}</h2>
+
+<p>{{SUMMARY}}</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="kpi">
+
+<h2>Coverage Metrics</h2>
+
+<div class="cards">
+
+<a href="#pages" class="card">
+<h3>Pages</h3>
+<h1>{{PAGES_VISITED}}</h1>
+</a>
+
+<a href="#network" class="card">
+<h3>Network</h3>
+<h1>{{NETWORK_REQUESTS}}</h1>
+</a>
+
+<a href="#resources" class="card">
+<h3>Broken Resources</h3>
+<h1>{{BROKEN_RESOURCES}}</h1>
+</a>
+
+<a href="#console" class="card">
+<h3>Console Errors</h3>
+<h1>{{CONSOLE_ERRORS}}</h1>
+</a>
+
+<a href="#console" class="card">
+<h3>Warnings</h3>
+<h1>{{CONSOLE_WARNINGS}}</h1>
+</a>
+
+<a href="#findings" class="card">
+<h3>Findings</h3>
+<h1>{{FINDING_COUNT}}</h1>
+</a>
+
+</div>
+
+</section>
+
+
+
+<section id="summary">
+
+<h2>Executive Summary</h2>
+
+{{EXECUTIVE_SUMMARY}}
+
+</section>
+
+
+
+<section id="pages">
+
+<h2>Pages Visited</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Page</th>
+<th>URL</th>
+<th>Status</th>
+<th>Controls</th>
+<th>Screenshot</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{{PAGE_ROWS}}
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<section id="network">
+
+<h2>Network Requests</h2>
+
+{{NETWORK_TABLE}}
+
+</section>
+
+
+
+<section id="console">
+
+<h2>Console Messages</h2>
+
+{{CONSOLE_TABLE}}
+
+</section>
+
+
+
+<section id="resources">
+
+<h2>Broken Resources</h2>
+
+{{BROKEN_RESOURCE_TABLE}}
+
+</section>
+
+
+
+<section id="accessibility">
+
+<h2>Accessibility</h2>
+
+{{ACCESSIBILITY_TABLE}}
+
+</section>
+
+
+
+<section id="performance">
+
+<h2>Performance</h2>
+
+{{PERFORMANCE_TABLE}}
+
+</section>
+
+
+
+<section id="findings">
+
+<h2>Findings</h2>
+
+<div id="finding-container">
+
+    <!-- QRG repeats this card once for every finding -->
+
+    <div class="finding" id="{{FINDING_ID}}">
+
+        <h3>{{FINDING_TITLE}}</h3>
+
+        <span class="badge {{SEVERITY_CLASS}}">
+            {{SEVERITY}}
+        </span>
+
+        <div class="finding-grid">
+
+            <div>
+
+                <div class="label">Category</div>
+                <div class="value">{{CATEGORY}}</div>
+
+                <div class="label">Page</div>
+                <div class="value">{{PAGE}}</div>
+
+                <div class="label">Expected</div>
+                <div class="value">{{EXPECTED}}</div>
+
+                <div class="label">Actual</div>
+                <div class="value">{{ACTUAL}}</div>
+
+            </div>
+
+            <div>
+
+                <div class="label">Business Impact</div>
+                <div class="value">{{BUSINESS_IMPACT}}</div>
+
+                <div class="label">Testing Impact</div>
+                <div class="value">{{TESTING_IMPACT}}</div>
+
+                <div class="label">Recommendation</div>
+                <div class="value">{{RECOMMENDATION}}</div>
+
+            </div>
+
+        </div>
+
+        <h4>Evidence</h4>
+
+        <pre>{{EVIDENCE}}</pre>
+
+        {{SCREENSHOT}}
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section id="gallery">
+
+<h2>Evidence Gallery</h2>
+
+{{SCREENSHOT_GALLERY}}
+
+</section>
+
+
+
+<section id="appendix">
+
+<h2>Appendix</h2>
+
+{{APPENDIX}}
+
+</section>
+
+
+</div>
+
+</body>
+</html>
