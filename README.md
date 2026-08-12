@@ -91,10 +91,19 @@ Reload Visual Studio Code.
 
 ---
 
+
 # 4. Available Agents
 
-| Agent | Description |
-|---------|-------------|
+Before running any prompt, **select the appropriate GitHub Copilot Agent** from the Agent dropdown in VS Code. Each agent is specialized for a specific QA workflow.
+
+| Agent | Purpose | When to Use |
+|---------|-------------|-------------|
+| **QA Deployment Readiness** | Performs a comprehensive deployment readiness assessment including UI, APIs, network, console, accessibility, broken links/images and generates structured assessment artifacts. | Before handing over a deployment to QA/UAT or release validation. |
+| **QA Quick Readiness** | Performs a fast deployment readiness assessment focused on critical smoke checks and application health. | Immediately after deployment for rapid validation. |
+| **QA Test Automation Generator** | Generates Robot Framework Browser Library or Playwright automation from the latest readiness assessment. | After readiness validation to accelerate automation creation. |
+| **QA Professional Report Generator** | Produces an executive-ready HTML report from the latest deployment readiness assessment. | After completing a deployment readiness assessment. |
+
+---------|-------------|
 | **QQRA** | Quick Deployment Readiness Assessment |
 | **QDRA** | Full Deployment Readiness Assessment |
 | **QRG** | Professional HTML Report Generator |
@@ -111,6 +120,10 @@ https://qa-readiness-ik9w1gvr5-ashwinbalajiks-projects.vercel.app
 ```
 
 ---
+
+# 6. Running an Assessment
+
+> **Important:** Before entering any prompt, select the required GitHub Copilot Agent from the **Agent** dropdown in VS Code. The prompts below assume the correct agent has already been selected.
 
 # 6. Quick Readiness Assessment (Recommended)
 
