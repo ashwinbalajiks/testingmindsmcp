@@ -125,19 +125,17 @@ https://qa-readiness-ik9w1gvr5-ashwinbalajiks-projects.vercel.app
 
 > **Important:** Before entering any prompt, select the required GitHub Copilot Agent from the **Agent** dropdown in VS Code. The prompts below assume the correct agent has already been selected.
 
-# 6. Quick Readiness Assessment (Recommended)
+# 6. QA Deployment Readiness or Quick Readiness Assessment (Recommended)
 
-Select the **QQRA** agent.
+Select the **QA Deployment Readiness** agent.
 
 Run the following prompt:
 
 ```text
-Test the deployment readiness of
-
-https://qa-readiness-ik9w1gvr5-ashwinbalajiks-projects.vercel.app
+Test the deployment readiness of https://qa-readiness-ik9w1gvr5-ashwinbalajiks-projects.vercel.app
 ```
 
-QQRA performs a lightweight readiness assessment and generates a concise HTML report.
+QA Quick Readiness performs a lightweight readiness assessment and generates a concise HTML report.
 
 ---
 
@@ -159,7 +157,7 @@ QDRA performs a comprehensive readiness assessment and generates structured asse
 
 # 8. Professional Report Generation
 
-After QDRA completes, select the **QRG** agent.
+After QDRA completes, select the **QA Test Automation Generator** agent.
 
 Run:
 
